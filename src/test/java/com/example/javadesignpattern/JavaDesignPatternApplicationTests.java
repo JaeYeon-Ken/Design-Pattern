@@ -1,8 +1,8 @@
 package com.example.javadesignpattern;
 
-import com.example.javadesignpattern.simplefactory.store.KRPizzaStore;
-import com.example.javadesignpattern.simplefactory.store.NYPizzaStore;
-import com.example.javadesignpattern.simplefactory.store.PizzaStore;
+import com.example.javadesignpattern.abstractfactorymethod.store.KRPizzaStore;
+import com.example.javadesignpattern.abstractfactorymethod.store.NYPizzaStore;
+import com.example.javadesignpattern.abstractfactorymethod.store.PizzaStore;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

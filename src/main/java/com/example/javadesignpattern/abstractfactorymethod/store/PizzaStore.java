@@ -8,9 +8,9 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory.store;
+package com.example.javadesignpattern.abstractfactorymethod.store;
 
-import com.example.javadesignpattern.simplefactory.pizza.Pizza;
+import com.example.javadesignpattern.abstractfactorymethod.pizza.Pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
@@ -25,11 +25,6 @@ public abstract class PizzaStore {
 
   public Pizza orderPizza(String type) {
     /**
-     * before
-     */
-//    Pizza pizza = simplePizzaFactory.createPizza(type);
-
-    /**
      * after
      */
     Pizza pizza = createPizza(type);
@@ -37,7 +32,6 @@ public abstract class PizzaStore {
     pizza.prepare();
     pizza.bake();
     pizza.cut();
-    pizza.box();
 
     return pizza;
   }
@@ -47,7 +41,7 @@ public abstract class PizzaStore {
    *
    * 간단한 팩토리에선 팩토리가 PizzaStore 안에 포함되는 별개의 객체였지만, 팩토리 메서드 패턴은
    * createPizza 가 어떤 피자를 만들 지 각 지점(NYPizzaStore, KRPizzaStore)에서 결정하므로
-   * 더 유연함. -> 이건 그냥 depth 가 하나 더 생긴 차이 아닌가 ??
+   * 더 유연함. -> 이건 단순히 depth 가 하나 더 생겨서 더 유연하단 뜻일까 ??
    *
    */
   public abstract Pizza createPizza(String type);

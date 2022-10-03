@@ -8,7 +8,9 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory.pizza;
+package com.example.javadesignpattern.abstractfactorymethod.pizza;
+
+import com.example.javadesignpattern.abstractfactorymethod.factory.PizzaIngredientFactory;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
@@ -19,29 +21,18 @@ package com.example.javadesignpattern.simplefactory.pizza;
  * @version 1.0
  * @since 1.0
  */
-public abstract class Pizza {
+public class VeggiePizza extends Pizza {
+  PizzaIngredientFactory pizzaIngredientFactory;
 
-  protected String name;
-  protected String dough;
-  protected String sauce;
+  public VeggiePizza(PizzaIngredientFactory pizzaIngredientFactory) {
+    this.pizzaIngredientFactory = pizzaIngredientFactory;
+  }
 
+  @Override
   public void prepare() {
-    this.name = "pizza";
-    this.dough = "dough";
-    this.sauce = "sauce";
+    name = "Veggie Pizza";
+    dough = pizzaIngredientFactory.createDough();
+    sauce = pizzaIngredientFactory.createSauce();
     System.out.println("prepare - " + name + ", " + dough + ", " + sauce);
   }
-
-  public void bake() {
-    System.out.println("Pizza.bake");
-  }
-
-  public void cut() {
-    System.out.println("Pizza.cut");
-  }
-
-  public void box() {
-    System.out.println("box - " + name + ", " + dough + ", " + sauce);
-  }
-
 }
