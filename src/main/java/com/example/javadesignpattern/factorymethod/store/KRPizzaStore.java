@@ -8,12 +8,12 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory.store;
+package com.example.javadesignpattern.factorymethod.store;
 
-import com.example.javadesignpattern.simplefactory.pizza.NYCheesePizza;
-import com.example.javadesignpattern.simplefactory.pizza.NYPepperoniPizza;
-import com.example.javadesignpattern.simplefactory.pizza.NYVeggiePizza;
-import com.example.javadesignpattern.simplefactory.pizza.Pizza;
+import com.example.javadesignpattern.factorymethod.pizza.KRCheesePizza;
+import com.example.javadesignpattern.factorymethod.pizza.KRPepperoniPizza;
+import com.example.javadesignpattern.factorymethod.pizza.KRVeggiePizza;
+import com.example.javadesignpattern.factorymethod.pizza.Pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
@@ -24,18 +24,18 @@ import com.example.javadesignpattern.simplefactory.pizza.Pizza;
  * @version 1.0
  * @since 1.0
  */
-public class NYPizzaStore extends PizzaStore {
+public class KRPizzaStore extends PizzaStore {
 
   @Override
   public Pizza createPizza(String type) {
     Pizza pizza = null;
 
     if (type.equals("cheese")) {
-      pizza = new NYCheesePizza();
+      pizza = new KRCheesePizza();
     } else if (type.equals("veggie")) {
-      pizza = new NYVeggiePizza();
+      pizza = new KRVeggiePizza();
     } else if (type.equals("pepperoni")) {
-      pizza = new NYPepperoniPizza();
+      pizza = new KRPepperoniPizza();
     }
 
     return pizza;

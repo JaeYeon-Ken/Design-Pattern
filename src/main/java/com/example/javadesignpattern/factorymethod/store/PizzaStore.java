@@ -8,9 +8,9 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory.store;
+package com.example.javadesignpattern.factorymethod.store;
 
-import com.example.javadesignpattern.simplefactory.pizza.Pizza;
+import com.example.javadesignpattern.factorymethod.pizza.Pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
