@@ -1,24 +1,24 @@
 package com.example.javadesignpattern;
 
-import com.example.javadesignpattern.simplefactory.PizzaStore;
-import com.example.javadesignpattern.simplefactory.SimplePizzaFactory;
+import com.example.javadesignpattern.simplefactory.store.KRPizzaStore;
+import com.example.javadesignpattern.simplefactory.store.NYPizzaStore;
+import com.example.javadesignpattern.simplefactory.store.PizzaStore;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class JavaDesignPatternApplicationTests {
   @Test
   void contextLoads() {
-    SimplePizzaFactory simplePizzaFactory = new SimplePizzaFactory();
+    PizzaStore krPizzaStore = new KRPizzaStore();
+    PizzaStore nyPizzaStore = new NYPizzaStore();
 
-    PizzaStore pizzaStore = new PizzaStore(simplePizzaFactory);
-
-    pizzaStore.orderPizza("cheese");
+    krPizzaStore.orderPizza("cheese");
 
     System.out.println("====================================");
 
-    pizzaStore.orderPizza("veggie");
+    nyPizzaStore.orderPizza("cheese");
+
   }
 
 }

@@ -8,7 +8,7 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory;
+package com.example.javadesignpattern.simplefactory.pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.

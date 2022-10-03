@@ -8,7 +8,7 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory;
+package com.example.javadesignpattern.simplefactory.pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
@@ -19,14 +19,13 @@ package com.example.javadesignpattern.simplefactory;
  * @version 1.0
  * @since 1.0
  */
-public class PepperoniPizza extends Pizza {
-
+public class KRVeggiePizza extends Pizza {
   @Override
   public void prepare() {
     // 재료만 다르고 나머지 bake, cut, box 과정은 동일하다고 가정
-    super.name = "pepproniPizza";
-    super.dough = "pepproniDough";
-    super.sauce = "pepproniSauce";
+    super.name = "KR veggiePizza";
+    super.dough = "KR veggieDough";
+    super.sauce = "KR veggieSauce";
     System.out.println("prepare - " + super.name + ", " + super.dough + ", " + super.sauce);
   }
 }

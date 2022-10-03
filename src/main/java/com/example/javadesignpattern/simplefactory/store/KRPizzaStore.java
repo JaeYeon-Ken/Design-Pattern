@@ -8,7 +8,12 @@
  * Written by Infra Team <jaeyeon_kim@bigin.io>, 2022/10/03
  */
 
-package com.example.javadesignpattern.simplefactory;
+package com.example.javadesignpattern.simplefactory.store;
+
+import com.example.javadesignpattern.simplefactory.pizza.KRCheesePizza;
+import com.example.javadesignpattern.simplefactory.pizza.KRPepperoniPizza;
+import com.example.javadesignpattern.simplefactory.pizza.KRVeggiePizza;
+import com.example.javadesignpattern.simplefactory.pizza.Pizza;
 
 /**
  * create on 2022/10/03. create by IntelliJ IDEA.
@@ -19,17 +24,18 @@ package com.example.javadesignpattern.simplefactory;
  * @version 1.0
  * @since 1.0
  */
-public class SimplePizzaFactory {
+public class KRPizzaStore extends PizzaStore {
 
+  @Override
   public Pizza createPizza(String type) {
     Pizza pizza = null;
 
     if (type.equals("cheese")) {
-      pizza = new CheesePizza();
+      pizza = new KRCheesePizza();
     } else if (type.equals("veggie")) {
-      pizza = new VeggiePizza();
+      pizza = new KRVeggiePizza();
     } else if (type.equals("pepperoni")) {
-      pizza = new PepperoniPizza();
+      pizza = new KRPepperoniPizza();
     }
 
     return pizza;
